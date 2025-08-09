@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 const Hero = () => {
   return (
     <section className="relative flex items-center justify-center text-center px-4 py-20 md:py-32 overflow-hidden bg-gradient-to-br from-indigo-900 to-purple-900">
@@ -127,9 +127,10 @@ const Hero = () => {
           Our intuitive drag-and-drop builder, modern templates, and expert tips
           will help you land your dream job faster.
         </p>
-        <button className="bg-white text-indigo-600 font-bold py-4 px-10 rounded-full shadow-lg hover:bg-gray-100 transition duration-300 transform hover:scale-105">
-          Create Your Resume Now
-        </button>
+       
+        <Link  to={'/resume'} className="bg-white text-indigo-600 font-bold py-4 px-10 rounded-full shadow-lg hover:bg-gray-100 transition duration-300 transform hover:scale-105"> 
+        Create Your Resume Now
+        </Link>
       </div>
     </section>
   );
