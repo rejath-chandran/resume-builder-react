@@ -7,6 +7,7 @@ import SkillsAndProjectsForm from './SkillsAndProjectsForm';
 import ResumePreview from './ResumePreview';
 import TemplateOne from '../ResumTemplates/TemplateOne';
 import { usePDF } from 'react-to-pdf';
+import ResumeToPdf from '../ResumTemplates/ResumeToPdf';
 
 
 const sampleResumeData = {
@@ -198,12 +199,7 @@ const ResumeBuilder = () => {
           data={resumeData}
           onEdit={() => goToStep(0)}
         />
-        <div>
-      <button onClick={() => toPDF(targetRef.current)}>Download PDF</button>
-      <div className='mt-4' >
-        <TemplateOne resumeData={sampleResumeData} ref={targetRef}/>
-      </div>
-    </div>
+      <ResumeToPdf/>
  
         </>
       )}

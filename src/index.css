@@ -24,12 +24,3 @@
 }
 
 
-@media print {
-  /* existing styles... */
-  
-  /* Avoid page breaks inside skills container and badges */
-  .skills-container, .skills-container > span {
-    page-break-inside: avoid;
-    break-inside: avoid;
-  }
-}
