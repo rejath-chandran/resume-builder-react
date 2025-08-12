@@ -11,7 +11,16 @@ import {
 Font.register({
   family: 'Lato',
   fonts: [
-    { src: 'https://fonts.gstatic.com/s/lato/v17/S6uyw4BMUTPHjx4wWw.ttf' },
+     {
+      src: 'https://fonts.gstatic.com/s/lato/v17/S6uyw4BMUTPHjx4wWw.ttf', // Regular
+      fontWeight: 'normal',
+      fontStyle: 'normal',
+    },
+    {
+      src: 'https://fonts.gstatic.com/s/lato/v17/S6u8w4BMUTPHjxsAXC-v.ttf', // Italic
+      fontWeight: 'normal',
+      fontStyle: 'italic',
+    },
   ],
 });
 
