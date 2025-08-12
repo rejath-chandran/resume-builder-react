@@ -1,5 +1,8 @@
 import React, { useRef } from 'react';
 import { Button } from './ui/button';
+import { PDFDownloadLink } from '@react-pdf/renderer';
+import ResumePDF from './ResumPdf';
+
 
 const ResumePreview = ({ data, onEdit }) => {
   const resumeRef = useRef(null);
@@ -110,7 +113,23 @@ const ResumePreview = ({ data, onEdit }) => {
 
       <div className="flex justify-end gap-2 mt-4 no-print">
         <Button onClick={onEdit} className="bg-purple-300 text-purple-950 hover:bg-purple-400">Edit Details</Button>
-        <Button onClick={handlePrint} className="bg-purple-300 text-purple-950 hover:bg-purple-400">Print to PDF</Button>
+        {/* <Button onClick={handlePrint} className="bg-purple-300 text-purple-950 hover:bg-purple-400">Print to PDF</Button> */}
+
+         <PDFDownloadLink
+        
+          document={<ResumePDF data={data} />}
+          fileName="resume.pdf"
+        >
+          {({ loading }) => (
+            <button
+               className="bg-purple-300 text-purple-950 font-semibold py-2 px-6 rounded-md hover:bg-purple-400 transition"
+              disabled={loading}
+            >
+              {loading ? 'Generating...' : 'Download Resume'}
+            </button>
+          )}
+        </PDFDownloadLink>
+
       </div>
     </div>
   );

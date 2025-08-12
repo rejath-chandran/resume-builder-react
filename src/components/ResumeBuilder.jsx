@@ -199,8 +199,7 @@ const ResumeBuilder = () => {
           data={resumeData}
           onEdit={() => goToStep(0)}
         />
-      <ResumeToPdf/>
- 
+
         </>
       )}
 
